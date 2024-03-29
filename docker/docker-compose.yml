@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  bevdepth:
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    init: true
+    shm_size: "24gb"
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/docker
+      - ../src/BEVDepth:/BEVDepth
+      - ../nuScenes:/nuScenes

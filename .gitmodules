@@ -1,0 +1,3 @@
+[submodule "src/BEVDepth"]
+	path = src/BEVDepth
+	url = git@github.com:Megvii-BaseDetection/BEVDepth.git
