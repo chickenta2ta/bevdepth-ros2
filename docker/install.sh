@@ -16,11 +16,11 @@ git checkout c9541b0
 pip3 install -e .
 
 # Install BEVDepth
-cd /BEVDepth
+cd /ros2_ws/src/bevdepth-ros2/src/BEVDepth
 pip3 install -r requirements.txt
 python3 setup.py develop
 mkdir data
-ln -s /nuScenes /BEVDepth/data/
+ln -s /ros2_ws/src/bevdepth-ros2/nuScenes /ros2_ws/src/bevdepth-ros2/src/BEVDepth/data/
 python3 scripts/gen_info.py
 pip3 install "numpy<1.24.0"
 
