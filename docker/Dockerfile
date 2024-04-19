@@ -37,6 +37,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/r
 
 RUN apt update
 RUN apt install -y ros-rolling-ros-base
+RUN source /opt/ros/rolling/setup.bash
 
 # Start bash
 ENTRYPOINT ["/bin/bash"]
